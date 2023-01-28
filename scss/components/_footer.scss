@@ -1,0 +1,52 @@
+
+.footer {
+    background: #000;
+    text-align: center;
+
+    .share {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .credit {
+        padding: 2rem 1rem;
+        color: #fff;
+        font-weight: normal;
+        font-size: 2rem;
+    }
+}
+
+#scroll-top {
+    position: fixed;
+    top: -120%;
+    right: 2rem;
+    padding: .5rem 1rem;
+    font-size: 3rem;
+    background: $red;
+    color: #fff;
+    border-radius: .5rem;
+    transition: 1s linear;
+    z-index: 1000;
+
+    &.active {
+        top: calc(100% - 12rem);
+    }
+}
+
+.loader-container {
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 10000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    &.fade-out {
+        top:  -120%;
+    }
+}

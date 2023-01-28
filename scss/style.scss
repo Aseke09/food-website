@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+@import "./components/vars";
+@import "./components/adaptive";
+@import "./components/header";
+@import "./components/home";
+@import "./components/speciality";
+@import "./components/popular";
+@import "./components/steps";
+@import "./components/gallery";
+@import "./components/reviews";
+@import "./components/order";
+@import "./components/footer";
+
+
+
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background: $red;
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    background: $bg;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+    color: #666;
+    span {
+        color: $red;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: .8rem 3rem;
+    border: .2rem solid $red;
+    color: $red;
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100%;
+        background: $red;
+        transition: .3s linear;
+        z-index: -1;
+    }
+    &:hover::before {
+        width: 100%;
+        left: 0;
+    }
+    &:hover {
+        color: #fff;
+    }
+}
+
